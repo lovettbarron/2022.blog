@@ -1,0 +1,6 @@
+[submodule "posts/blog"]
+	path = blog
+	url = git@github.com:lovettbarron/blog.git
+[submodule "blog"]
+	path = blog
+	url = git@github.com:lovettbarron/blog.git
