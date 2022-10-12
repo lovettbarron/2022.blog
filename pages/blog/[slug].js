@@ -3,6 +3,8 @@ import path from "path";
 import matter from "gray-matter";
 import marked from "marked";
 import Link from "next/link";
+import styled, { css } from "styled-components";
+import { Stack, Inline, Split, Cover, Frame } from "@bedrock-layout/primitives";
 
 export default function PostPage({
   frontmatter: { title, date, thumbnail },
@@ -11,10 +13,12 @@ export default function PostPage({
 }) {
   console.log(title);
   return (
-    <>
-      <Link href="/">
-        <a className="btn btn-back">Go Back</a>
-      </Link>
+    <Stack>
+      <Inline>
+        <Link href="/">
+          <a className="btn btn-back">Go Back</a>
+        </Link>
+      </Inline>
       <div className="card card-page">
         <h1 className="post-title">{title}</h1>
         <div className="post-date">Posted on {date}</div>
@@ -23,7 +27,7 @@ export default function PostPage({
           <div dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
         </div>
       </div>
-    </>
+    </Stack>
   );
 }
 

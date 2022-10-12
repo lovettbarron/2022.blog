@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@bedrock-layout/primitives": "^2.2.1",
     "copy-webpack-plugin": "^6.2.1",
     "gray-matter": "^4.0.3",
     "marked": "^2.1.2",
